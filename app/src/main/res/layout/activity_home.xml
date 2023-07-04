@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <!-- Login LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Top Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Logo Icon -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_centerInParent="true"
+                />
+
+            <!-- Bluetooth Icon -->
+            <ImageButton
+                android:id="@+id/bluetoothButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bluetooth"
+                android:background="@android:color/transparent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                />
+
+            <!-- Connect Text -->
+            <TextView
+                android:id="@+id/connectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BT"
+                android:textSize="12sp"
+                android:layout_below="@id/bluetoothButton"
+                android:layout_alignStart="@id/bluetoothButton"
+                />
+
+        </RelativeLayout>
+
+
+        <!-- Login Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:id="@+id/loginText"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <!-- Heart Rate Button -->
+        <LinearLayout
+            android:id="@+id/heartRateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_heart_rate"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/heartRateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Rate"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:backgroundTint="#D35C5C"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+        <!-- Temperature Button -->
+        <LinearLayout
+            android:id="@+id/temperatureLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_temperature"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/temperatureButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:backgroundTint="#E8E873"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+        <!-- Sleeping Pattern Button -->
+        <LinearLayout
+            android:id="@+id/sleepingPatternLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sleeping_pattern"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/sleepingPatternButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sleeping Pattern"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:backgroundTint="#80E880"
+                app:cornerRadius="12dp" />
+
+
+
+        </LinearLayout>
+
+        <!-- Walking Steadiness Button -->
+        <LinearLayout
+            android:id="@+id/walkingSteadinessLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_walking_steadiness"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/walkingSteadinessButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Walking Steadiness"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:backgroundTint="#E4AEC0"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+
+
+
+
+        <!-- Horizontal Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <!-- Home Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="onHomeButtonClick">
+
+                <ImageView
+                    android:id="@+id/homeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home"
+                    android:background="@android:color/transparent"
+                    app:cornerRadius="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <!-- Report Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="onReportButtonClick">
+
+                <ImageView
+                    android:id="@+id/reportButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_report"
+                    android:background="@android:color/transparent"
+                    app:cornerRadius="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <!-- Settings Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="onSettingsButtonClick">
+
+                <ImageView
+                    android:id="@+id/settingsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings"
+                    android:background="@android:color/transparent"
+                    app:cornerRadius="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <!-- App Logo -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wearable Wellness Checker"
+            android:id="@+id/loginText"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <!-- Username EditText -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/username"
+            android:layout_marginTop="40dp"
+            android:padding="8dp"
+            android:hint="Username"
+            android:textColor="@android:color/black"
+            android:drawablePadding="8dp"
+            android:background="@drawable/edittext_border" />
+
+        <!-- Password EditText -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/password"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:hint="Password"
+            android:textColor="@android:color/black"
+            android:drawablePadding="8dp"
+            android:background="@drawable/edittext_border" />
+
+        <!-- Login Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Login"
+            android:id="@+id/loginButton"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#093AE3"
+            app:cornerRadius="10dp" />
+
+        <!-- "New to WWC?" text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New to WWC?"
+            android:textSize="18sp"
+            android:textAlignment="center" />
+
+        <!-- Create Account Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Create Account"
+            android:id="@+id/createAccountButton"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#093AE3"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
